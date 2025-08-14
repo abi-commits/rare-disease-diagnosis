@@ -1,0 +1,23 @@
+# Data processing
+pandas
+numpy
+scikit-learn
+
+# Graph Database Integration
+py2neo           # For Neo4j
+neo4j            # Official driver
+
+# Vector Database (Pinecone)
+pinecone-client
+
+# API & Backend
+fastapi
+uvicorn
+
+# Utilities
+python-dotenv
+requests
+tqdm
+
+#notebooks
+jupyter
