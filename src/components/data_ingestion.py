@@ -1,12 +1,11 @@
 import os
 import requests
-from src.logging.logger import logger
-from src.exception.exception import CustomException
+from src.utils.logging import logger
+from src.utils.exception import CustomException
 import sys
 
 class DataIngestion:
     def __init__(self, data_folder="data"):
-        # Root-level data folder
         self.data_folder = os.path.join(os.getcwd(), data_folder)
         os.makedirs(self.data_folder, exist_ok=True)
 
@@ -43,7 +42,7 @@ class DataIngestion:
             "https://www.orphadata.com/data/xml/en_product4.xml",
             "https://www.orphadata.com/data/xml/en_product6.xml",
             "https://www.orphadata.com/data/xml/en_product7.xml",
-            "https://www.orphadata.com/data/xml/en_product9.xml",
+            #"https://www.orphadata.com/data/xml/en_product9.xml",
 
             # HPO files
             "http://purl.obolibrary.org/obo/hp.obo",
