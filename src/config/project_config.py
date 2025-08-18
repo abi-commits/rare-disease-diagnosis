@@ -1,5 +1,5 @@
 import os
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -26,8 +26,8 @@ class Neo4jConfig:
     
 @dataclass
 class ProjectConfig:
-    openai: OpenAIConfig = OpenAIConfig()
-    pinecone: PineconeConfig = PineconeConfig()
-    neo4j: Neo4jConfig = Neo4jConfig()
+    openai: OpenAIConfig = field(default_factory = OpenAIConfig)
+    pinecone: PineconeConfig = field(default_factory=PineconeConfig)
+    neo4j: Neo4jConfig = field(default_factory=Neo4jConfig)
     
     
